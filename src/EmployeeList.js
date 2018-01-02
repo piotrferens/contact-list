@@ -5,7 +5,7 @@ import EmployeeListItem from "./EmployeeListItem";
 export default class EmployeeList extends Component {
   render() {
     return (
-      <div>
+      <div className="employeeList">
         <EmployeeListItem />
       </div>
     );

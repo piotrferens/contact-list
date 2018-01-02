@@ -5,7 +5,7 @@ import HeaderEmployee from "./HeaderEmployee";
 export default class EmployeePage extends Component {
   render() {
     return (
-      <div>
+      <div className="employeePage">
         <HeaderEmployee />
       </div>
     );

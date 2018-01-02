@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homePage {
+  width: 30%;
+  height: 600px;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.employeePage {
+  width: 30%;
+  height: 600px;
+  border: 1px solid red;
+  padding: 20px;
+}
+
+.headerList {
+  text-align: center;
+  padding: 10px;
+}
+
+.headerEmployee {
+  text-align: center;
+  padding: 10px;
+}
+
+.searchBar {
+  display: flex;
+}
+
+.searchBar > input {
+  flex: 1;
+  padding: 10px;
+}
+
+.employeeList {
+}
