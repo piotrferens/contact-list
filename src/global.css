@@ -20,15 +20,16 @@
 .homePage {
   width: 30%;
   height: 600px;
-  border: 1px solid black;
   padding: 20px;
+  border: 1px solid black;
 }
 
 .employeePage {
   width: 30%;
   height: 600px;
-  border: 1px solid red;
   padding: 20px;
+  border: 1px solid black;
+  border-left: 0px;
 }
 
 .headerList {
@@ -51,4 +52,86 @@
 }
 
 .employeeList {
+  overflow-y: auto;
+  max-height: 523px;
+  margin-top: 20px;
+}
+
+.employeeList > div {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.employeeImage {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+}
+
+.employeeName {
+  font-size: 20px;
+}
+
+.employeeDescription {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  font-size: 12px;
+}
+
+@keyframes coolAnimation {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.profile {
+  height: 80%;
+  animation: coolAnimation 0.5s;
+  padding: 5px;
+}
+
+.profile > div {
+  border: 1px solid rgb(143, 141, 141);
+  border-bottom: 0px;
+}
+.selectedEmployee {
+  display: flex;
+}
+.selectedEmployeeImage {
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+}
+
+.selectedEmployeeDescription {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.selectedEmployeeInfo {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(143, 141, 141);
+}
+
+.selectedEmployeeInfo > div {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-bottom: 1px solid rgb(143, 141, 141);
 }

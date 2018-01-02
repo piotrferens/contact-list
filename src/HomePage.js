@@ -17,6 +17,7 @@ export default class HomePage extends Component {
         <EmployeeList
           employees={this.props.employees}
           fetchEmployee={this.props.fetchEmployee}
+          selectEmployee={this.props.selectEmployee}
         />
       </div>
     );

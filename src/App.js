@@ -7,7 +7,8 @@ class App extends Component {
   state = {
     searchEmployee: "",
     employees: [],
-    filteredEmployees: []
+    filteredEmployees: [],
+    selectedEmployee: null
   };
 
   componentDidMount() {
@@ -26,11 +27,19 @@ class App extends Component {
   };
 
   fetchEmployee = () => {
-    fetch("https://uinames.com/api/?amount=10&ext")
+    fetch("https://uinames.com/api/?amount=50&ext")
       .then(response => response.json())
       .then(response =>
         this.setState({ employees: response, filteredEmployees: response })
       );
+  };
+
+  selectEmployee = email => {
+    this.setState({
+      selectedEmployee: this.state.employees.find(
+        employee => employee.email === email
+      )
+    });
   };
 
   render() {
@@ -41,8 +50,9 @@ class App extends Component {
           employees={this.state.filteredEmployees}
           searchingEmployee={this.searchingEmployee}
           fetchEmployee={this.fetchEmployee}
+          selectEmployee={this.selectEmployee}
         />
-        <EmployeePage />
+        <EmployeePage selectedEmployee={this.state.selectedEmployee} />
       </div>
     );
   }

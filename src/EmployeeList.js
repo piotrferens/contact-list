@@ -9,6 +9,7 @@ export default class EmployeeList extends Component {
         <EmployeeListItem
           employees={this.props.employees}
           fetchEmployee={this.props.fetchEmployee}
+          selectEmployee={this.props.selectEmployee}
         />
       </div>
     );
