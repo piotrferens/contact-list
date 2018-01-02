@@ -9,8 +9,15 @@ export default class HomePage extends Component {
     return (
       <div className="homePage">
         <HeaderList />
-        <SearchBar />
-        <EmployeeList />
+        <SearchBar
+          searchEmployee={this.props.searchEmployee}
+          searchingEmployee={this.props.searchingEmployee}
+          filteredEmployees={this.props.filteredEmployees}
+        />
+        <EmployeeList
+          employees={this.props.employees}
+          fetchEmployee={this.props.fetchEmployee}
+        />
       </div>
     );
   }
